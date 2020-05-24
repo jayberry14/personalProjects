@@ -11,7 +11,7 @@ string GetCurrentWorkingDir(void);
 
 /*********************
  * CANONICALIZATION
- * *******************/
+ *********************/
 list<string> canonicalization(string encoding) {
     //Write parsing code here
     list <string> cleanPath;
