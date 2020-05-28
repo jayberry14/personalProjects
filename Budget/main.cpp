@@ -8,7 +8,8 @@
  *              with. It's very interactive and has several parts that were difficult to manage and figure
  *              out, but it was altogether a fun personal project
  * 
- * Skills: Object Oriented design, passing parameters by reference, 
+ * Skills: Object Oriented design, passing parameters by reference, interactions between pointers and
+ *         constructors, translation from Java to C++
  * 
  * *********************************************************************************************************/
 
