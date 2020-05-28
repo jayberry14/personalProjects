@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dakin\\cs313-php\\c#\\c#.csproj": {}
+    "C:\\Users\\dakin\\.resumeProjects\\C#\\c#.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dakin\\cs313-php\\c#\\c#.csproj": {
+    "C:\\Users\\dakin\\.resumeProjects\\C#\\c#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dakin\\cs313-php\\c#\\c#.csproj",
+        "projectUniqueName": "C:\\Users\\dakin\\.resumeProjects\\C#\\c#.csproj",
         "projectName": "c#",
-        "projectPath": "C:\\Users\\dakin\\cs313-php\\c#\\c#.csproj",
+        "projectPath": "C:\\Users\\dakin\\.resumeProjects\\C#\\c#.csproj",
         "packagesPath": "C:\\Users\\dakin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dakin\\cs313-php\\c#\\obj\\",
+        "outputPath": "C:\\Users\\dakin\\.resumeProjects\\C#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dakin\\AppData\\Roaming\\NuGet\\NuGet.Config"

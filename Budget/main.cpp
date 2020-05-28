@@ -1,130 +1,123 @@
+/************************************************************************************************************
+ * Name: Josh Mayberry
+ * Project: Budget Calculator
+ * 
+ * Description: This project was a personal choice of mine for my wife and I when we got married. I knew I
+ *              needed to watch my spending and she wanted to watch hers also, so I wrote this program to
+ *              show us how much money we would have left over each year depending on how much we started out
+ *              with. It's very interactive and has several parts that were difficult to manage and figure
+ *              out, but it was altogether a fun personal project
+ * 
+ * Skills: Object Oriented design, passing parameters by reference, 
+ * 
+ * *********************************************************************************************************/
+
+
 #include <iostream>
-#include <string>
-#include <BudgetUser.h>
+#include "BudgetUser.h"
 
 using namespace std;
-
-int foodQuery(BudgetUser budgetUser) {
-    int food;
-    int groceries;
-    int monthlyFood;
-    int restaraunt;
-    int monthlyRestaurant;
-
-    cout << ("Enter your estimated expense on groceries for one month: \n");
-    cin >> monthlyFood;
-    budgetUser.setGroceries(monthlyFood);
-    int yearlyFood = budgetUser.getGroceries() * 12;
-    budgetUser.setGroceries(yearlyFood);
-    groceries = (int) budgetUser.addToExpenses(yearlyFood);
-
-    cout << ("Enter your estimated expense on going out to eat for one month: \n");
-    cin >> monthlyRestaurant;
-    budgetUser.setOutToEat(monthlyRestaurant);
-    int yearlyRestaurant = budgetUser.getOutToEat() * 12;
-    budgetUser.setOutToEat(yearlyRestaurant);
-    restaraunt = (int) budgetUser.addToExpenses(yearlyRestaurant);
-
-    food = groceries + restaraunt;
-    return food;
-}
-
-int travelQuery(BudgetUser budgetUser) {
-    int travel;
-    int gas;
-    int monthlyGas;
-    int flights;
-    int monthlyFlights;
-
-    cout << ("Enter your estimated expense on gas for one month: \n");
-    cin >> monthlyGas;
-    budgetUser.setGas(monthlyGas);
-    int yearlyGas = budgetUser.getGas() * 12;
-    gas = (int) budgetUser.addToExpenses(yearlyGas);
-
-    cout << ("Enter your estimated expense on flights for the year: \n");
-    cin >> monthlyFlights;
-    budgetUser.setFlights(monthlyFlights);
-    int yearlyFlights = budgetUser.getFlights();
-    flights = (int) budgetUser.addToExpenses(yearlyFlights);
-
-    travel = gas + flights;
-    return travel;
-}
-
-int rentQuery(BudgetUser budgetUser) {
-    int rent;
-    int monthlyRent;
+long rentQuery(BudgetUser & budgetUser) {
+    long monthlyRent;
 
     cout << ("Enter your estimated expense on rent for one month: \n");
     cin >> monthlyRent;
-    budgetUser.setRent(monthlyRent);
-    int yearlyRent = budgetUser.getRent() * 12;
+    long yearlyRent = monthlyRent * 12;
     budgetUser.setRent(yearlyRent);
 
-    rent = (int) budgetUser.addToExpenses(yearlyRent);
-    return rent;
+    return yearlyRent;
 }
 
-int subscriptionQuery(BudgetUser budgetUser) {
-    int subscriptions;
-    int monthlySubs;
+long foodQuery(BudgetUser & budgetUser) {
+    long totalFood;
+    long monthlyGroceries;
+    long monthlyRestaurant;
+
+    cout << ("Enter your estimated expense on groceries for one month: \n");
+    cin >> monthlyGroceries;
+    long yearlyGroceries = monthlyGroceries * 12;
+    budgetUser.setGroceries(yearlyGroceries);
+
+    cout << ("Enter your estimated expense on going out to eat for one month: \n");
+    cin >> monthlyRestaurant;
+    long yearlyRestaurant = monthlyRestaurant * 12;
+    budgetUser.setOutToEat(yearlyRestaurant);
+
+    totalFood = yearlyRestaurant + yearlyGroceries;
+    return totalFood;
+}
+
+long travelQuery(BudgetUser & budgetUser) {
+    long travel;
+    long monthlyGas;
+    long yearlyFlights;
+
+    cout << ("Enter your estimated expense on gas for one month: \n");
+    cin >> monthlyGas;
+    long yearlyGas = monthlyGas * 12;
+    budgetUser.setGas(yearlyGas);
+
+    cout << ("Enter your estimated expense on flights for the year: \n");
+    cin >> yearlyFlights;
+    budgetUser.setFlights(yearlyFlights);
+
+    travel = yearlyGas + yearlyFlights;
+    return travel;
+}
+
+
+long subscriptionQuery(BudgetUser & budgetUser) {
+    long monthlySubs;
 
     cout << ("Enter your estimated expense for subscriptions for one month: \n");
     cin >> monthlySubs;
-    budgetUser.setSubscriptions(monthlySubs);
-    int yearlySubs = budgetUser.getSubscriptions() * 12;
+    long yearlySubs = monthlySubs * 12;
     budgetUser.setSubscriptions(yearlySubs);
 
-    subscriptions = (int) budgetUser.addToExpenses(yearlySubs);
-    return subscriptions;
+    return yearlySubs;
 }
 
-int insuranceQuery(BudgetUser budgetUser) {
-    int insurance;
-    int carInsurance;
-    int monthlyCar;
-    int healthInsurance;
-    int monthlyHealth;
-    int lifeInsurance;
-    int monthlyLife;
+long insuranceQuery(BudgetUser & budgetUser) {
+    long insurance;
+    long monthlyCar;
+    long monthlyHealth;
+    long monthlyLife;
 
     cout << ("Enter your estimated car insurance payment for one month: \n");
     cin >> monthlyCar;
-    budgetUser.setAutoInsurance(monthlyCar);
-    int yearlyCar = budgetUser.getAutoInsurance() * 12;
-    carInsurance = (int) budgetUser.addToExpenses(yearlyCar);
+    long yearlyCar = monthlyCar * 12;
+    budgetUser.setAutoInsurance(yearlyCar);
 
     cout << ("Enter your estimated health insurance payment for one month: \n");
     cin >> monthlyHealth;
-    budgetUser.setHealthInsurance(monthlyHealth);
-    int yearlyHealth = budgetUser.getHealthInsurance() * 12;
-    healthInsurance = (int) budgetUser.addToExpenses(yearlyHealth);
+    long yearlyHealth = monthlyHealth * 12;
+    budgetUser.setHealthInsurance(yearlyHealth);
 
     cout << ("Enter your estimated life insurance payment for the year: \n");
     cin >> monthlyLife;
-    budgetUser.setLifeInsurance(monthlyLife);
-    int yearlyLife = budgetUser.getLifeInsurance();
-    lifeInsurance = (int) budgetUser.addToExpenses(yearlyLife);
+    long yearlyLife = monthlyLife;
+    budgetUser.setLifeInsurance(yearlyLife);
 
-    insurance = carInsurance + healthInsurance + lifeInsurance;
+    insurance = yearlyCar + yearlyHealth + yearlyLife;
     return insurance;
 }
 
 void displayExpenses(BudgetUser budgetUser) {
-    int totalExpenses = budgetUser.getTotalExpenses();
-    int rentExpense = budgetUser.getRent();
-    int travelExpense = budgetUser.getFlights() + budgetUser.getGas();
-    int foodExpense = budgetUser.getGroceries() + budgetUser.getOutToEat();
-    int subExpense = budgetUser.getSubscriptions();
-    int insuranceExpense = budgetUser.getAutoInsurance() + budgetUser.getHealthInsurance() + budgetUser.getLifeInsurance();
-    cout << ("Your current rent is $" + rentExpense);
-    cout << ("Your current travel expenses are $" + travelExpense);
-    cout << ("Your current food expenses are $" + foodExpense);
-    cout << ("Your current subscription expense is $" + subExpense);
-    cout << ("Your current insurance expense is $" + insuranceExpense);
-    cout << ("Your current expenses in total is $" + totalExpenses);
-    cout << ("Your current funds to use is $" + (budgetUser.getIncome() - totalExpenses)) << endl;
+    long totalExpenses = budgetUser.getTotalExpenses();
+    long income = budgetUser.getIncome();
+    long rentExpense = budgetUser.getRent();
+    long travelExpense = budgetUser.getFlights() + budgetUser.getGas();
+    long foodExpense = budgetUser.getGroceries() + budgetUser.getOutToEat();
+    long subExpense = budgetUser.getSubscriptions();
+    long insuranceExpense = budgetUser.getAutoInsurance() + budgetUser.getHealthInsurance() + budgetUser.getLifeInsurance();
+    cout << "Your current yearly income is $" << income << endl;
+    cout << "Your current rent is $" << rentExpense << endl;
+    cout << "Your current travel expenses are $" << travelExpense << endl;
+    cout << "Your current food expenses are $" << foodExpense << endl;
+    cout << "Your current subscription expense is $" << subExpense << endl;
+    cout << "Your current insurance expense is $" << insuranceExpense << endl;
+    cout << "Your current expenses in total is $" << totalExpenses << endl;
+    cout << "Your current funds to use is $" << income - totalExpenses << endl;
 }
 
 int main() {
@@ -133,12 +126,19 @@ int main() {
 
     long income;
     cin >> income;
-    BudgetUser *budgetUser = new BudgetUser(income);
+    BudgetUser budgetUser = BudgetUser(income);
 
-    char input = ' ';
+    long rent = 0;
+    long food = 0;
+    long travel = 0;
+    long subscriptions = 0;
+    long insurance = 0;
+
+
+    char input;
     bool done = false;
     while (!done){
-        cout << "Options:                                      " <<
+        cout << "Options:                                    \n" <<
                 "Add rent,                            << R >>\n" <<
                 "Add food expenses,                   << F >>\n" <<
                 "Add travel expenses,                 << T >>\n" <<
@@ -146,39 +146,48 @@ int main() {
                 "Add insurance payments,              << I >>\n" <<
                 "Display current budget w/o quitting, << D >>\n" <<
                 "Finish budget and show results,      << Q >>\n" << endl;
+        
+        cout << "So far, you've accumulated $" << budgetUser.getTotalExpenses() << " in expenses." << endl << endl;
 
-        switch (input){
+        cin >> input;
+        switch (toupper(input)){
             case 'D':
-                displayExpenses(*budgetUser);
+                displayExpenses(budgetUser);
                 break;
 
             case 'F':
-                foodQuery(*budgetUser);
+                food = foodQuery(budgetUser);
+                budgetUser.addToExpenses(food);
                 break;
 
             case 'I':
-                insuranceQuery(*budgetUser);
+                insurance = insuranceQuery(budgetUser);
+                budgetUser.addToExpenses(insurance);
                 break;
 
             case 'Q':
-                displayExpenses(*budgetUser);
+                displayExpenses(budgetUser);
                 done = true;
                 break;
 
             case 'R':
-                rentQuery(*budgetUser);
+                rent = rentQuery(budgetUser);
+                budgetUser.addToExpenses(rent);
                 break;
 
             case 'S':
-                subscriptionQuery(*budgetUser);
+                subscriptions = subscriptionQuery(budgetUser);
+                budgetUser.addToExpenses(subscriptions);
                 break;
 
             case 'T':
-                travelQuery(*budgetUser);
+                travel = travelQuery(budgetUser);
+                budgetUser.addToExpenses(travel);
                 break;
 
             default:
                 cout << "Please enter a valid command" << endl;
         }
     }
+    return 0;
 }

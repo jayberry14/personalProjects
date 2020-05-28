@@ -8,124 +8,128 @@ class BudgetUser {
     //Used at all times
     private:
     long income;
-    int rent;
-    int groceries;
-    int outToEat;
-    int gas;
-    int flights;
-    int tuition;
-    int subscriptions;
-    int insuranceAuto;
-    int insuranceHealth;
-    int insuranceLife;
+    long rent;
+    long groceries;
+    long outToEat;
+    long gas;
+    long flights;
+    long tuition;
+    long subscriptions;
+    long insuranceAuto;
+    long insuranceHealth;
+    long insuranceLife;
 
     //Used when person is married
-    int internet;
-    int electricity;
-    int hvac;
-    int savings;
+    long internet;
+    long electricity;
+    long hvac;
+    long savings;
     
-    int totalExpenses;
+    long totalExpenses;
 
     public:
 
+    BudgetUser() {
+        setIncome(0);
+        setTotalExpenses(0);
+        setRent(0);
+        setFlights(0);
+        setGas(0);
+        setElectricity(0);
+        setGroceries(0);
+        setOutToEat(0);
+        setSubscriptions(0);
+        setHvac(0);
+        setAutoInsurance(0);
+        setHealthInsurance(0);
+        setLifeInsurance(0);
+        setTuition(0);
+        setSavings(0);
+    }
+
     BudgetUser(long income) {
         setIncome(income);
+        setTotalExpenses(0);
+        setRent(0);
+        setFlights(0);
+        setGas(0);
+        setElectricity(0);
+        setGroceries(0);
+        setOutToEat(0);
+        setSubscriptions(0);
+        setHvac(0);
+        setAutoInsurance(0);
+        setHealthInsurance(0);
+        setLifeInsurance(0);
+        setTuition(0);
+        setSavings(0);
     }
 
-    long getIncome() {
-        return income;
-    }
+    long getIncome() { return income; }
 
-    void setIncome(long incomeX) {
-        income = incomeX;
-    }
+    void setIncome(long incomeX) { income = incomeX; }
 
-    int getRent() { return rent; }
+    long getRent() { return rent; }
 
-    void setRent(int rentX) {
-        rent = rentX;
-    }
+    void setRent(long rentX) { rent = rentX; }
 
-    int getGroceries() {
-        return groceries;
-    }
+    long getGroceries() { return groceries; }
 
-    void setGroceries(int food) {
-        groceries = food;
-    }
+    void setGroceries(long food) { groceries = food; }
 
-    int getOutToEat() {
-        return outToEat;
-    }
+    long getOutToEat() { return outToEat; }
 
-    void setOutToEat(int outToEatX) {
-        outToEat = outToEatX;
-    }
+    void setOutToEat(long outToEatX) { outToEat = outToEatX; }
 
-    int getGas() {
-        return gas;
-    }
+    long getGas() { return gas; }
 
-    void setGas(int gasX) {
-        gas = gasX;
-    }
+    void setGas(long gasX) { gas = gasX; }
 
-    int getFlights() {
-        return flights;
-    }
+    long getFlights() { return flights; }
 
-    void setFlights(int flightsX) {
-        flights = flightsX;
-    }
+    void setFlights(long flightsX) { flights = flightsX; }
 
-    int getSubscriptions() { return subscriptions; }
+    long getSubscriptions() { return subscriptions; }
 
-    void setSubscriptions(int subscriptionsX) { subscriptions = subscriptionsX; }
+    void setSubscriptions(long subscriptionsX) { subscriptions = subscriptionsX; }
 
-    int getAutoInsurance() { return insuranceAuto; }
+    long getAutoInsurance() { return insuranceAuto; }
 
-    void setAutoInsurance(int insuranceAutoX) { insuranceAuto = insuranceAutoX; }
+    void setAutoInsurance(long insuranceAutoX) { insuranceAuto = insuranceAutoX; }
 
-    int getHealthInsurance() { return insuranceHealth; }
+    long getHealthInsurance() { return insuranceHealth; }
 
-    void setHealthInsurance(int insuranceHealthX) { insuranceHealth = insuranceHealthX; }
+    void setHealthInsurance(long insuranceHealthX) { insuranceHealth = insuranceHealthX; }
 
-    int getLifeInsurance() { return insuranceLife; }
+    long getLifeInsurance() { return insuranceLife; }
 
-    void setLifeInsurance(int insuranceLifeX) { insuranceLife = insuranceLifeX; }
+    void setLifeInsurance(long insuranceLifeX) { insuranceLife = insuranceLifeX; }
 
-    int getInternet() { return internet; }
+    long getinternet() { return internet; }
 
-    void setInternet(int internetX) { internet = internetX; }
+    void setinternet(long internetX) { internet = internetX; }
 
-    int getElectricity() { return electricity; }
+    long getElectricity() { return electricity; }
 
-    void setElectricity(int electricityX) { electricity = electricityX; }
+    void setElectricity(long electricityX) { electricity = electricityX; }
 
-    int getHvac() { return hvac; }
+    long getHvac() { return hvac; }
 
-    void setHvac(int hvacX) { hvac = hvacX; }
+    void setHvac(long hvacX) { hvac = hvacX; }
 
-    int getTuition() { return tuition; }
+    long getTuition() { return tuition; }
 
-    void setTuition(int tuitionX) { tuition = tuitionX; }
+    void setTuition(long tuitionX) { tuition = tuitionX; }
 
-    int getSavings() { return savings; }
+    long getSavings() { return savings; }
 
-    void setSavings(int savingsX) { savings = savingsX; }
+    void setSavings(long savingsX) { savings = savingsX; }
 
-    int getTotalExpenses() {
-        return totalExpenses;
-    }
+    long getTotalExpenses() { return totalExpenses; }
 
-    void setTotalExpenses(int totalExpensesX) {
-        totalExpenses = totalExpensesX;
-    }
+    void setTotalExpenses(long totalExpensesX) { totalExpenses = totalExpensesX; }
 
-    long addToExpenses(int rhs) {
-        return totalExpenses += rhs;
-    }
+    long addToExpenses(long rhs) { return totalExpenses += rhs; }
 };
 
 #endif
