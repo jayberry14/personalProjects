@@ -25,8 +25,7 @@ class BudgetUser {
     int totalExpenses;
 
     public:
-    BudgetUser() {
-    }
+
     BudgetUser(long income) {
         setIncome(income);
     }
