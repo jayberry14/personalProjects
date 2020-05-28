@@ -1,3 +1,6 @@
+#ifndef BUDGETUSER_H
+#define BUDGETUSER_H
+
 #include <iostream>
 using namespace std;
 
@@ -124,3 +127,5 @@ class BudgetUser {
         return totalExpenses += rhs;
     }
 };
+
+#endif
