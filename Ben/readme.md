@@ -1,0 +1,3 @@
+This folder is dedicated to my friend and business partner Ben Bennington. He came to me with this idea to calculate a lagrangian, or the maximum utility in imports and exports based on what he was learning in his economics and higher math classes. This webapp allows a person to determine the maximum amount they should spend on any two products they are buying based on the utility of each product.
+
+We still are learning how to graph our results, but that is the next step.
