@@ -19,10 +19,10 @@
     </script>
 </head>
 <body>
-    <?php include '../../header.php';?>
+    <?php include 'header.php';?>
     <h1>Josh Mayberry's Online Profile</h1>
     <div class="container-fluid bg-1 text-center">
-        <img src="../../Files/self-portrait.jpg" alt="Me" class="img-circle img-1">
+        <img src="self-portrait.jpg" alt="Me" class="img-circle img-1">
         <br>
     </div>
     <div class="container-fluid bg-1">
