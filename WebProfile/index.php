@@ -3,12 +3,12 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Josh's Assignment Directory</title>
+    <title>Jayberry Studios</title>
     <link rel="icon" type="image/ico" href="https://cdn3.iconfinder.com/data/icons/round-icons-vol-2/512/j-512.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='directory.css'>
     <script>
         if ( window.history.replaceState ) {
@@ -18,40 +18,11 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <h1>Joshua Mayberry - Portfolio</h1>
-    <div class="container-fluid bg-1 text-center">
-        
-    </div>
-    <div class="container-fluid bg-1">
-        <p>
-            
-        </p>
-    </div>
-    <div class="container-fluid bg-2">
-        <p>
-            
-        </p>
-    </div>
-    <div class="container-fluid bg-3">
-        <p>
-            
-        </p>
-    </div>
-    <div class="container-fluid bg-4">
-        <p>
-            
-        </p>
-    </div>
-    <div class="container-fluid bg-5">
-        <p>
-            
-        </p>
-    </div>
-    <div class="container-fluid bg-6">
-        <p>
-            
-        </p>
-    </div>
+    <main role="main" class="inner-cover">
+        <h1 class="cover-heading">Let's make something beautiful together</h1>
+        <p class="lead">Yes</p>
+    </main>
 </body>
+<?php include 'footer.php';?>
 </html>
 
