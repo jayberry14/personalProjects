@@ -26,7 +26,6 @@ void callBack(const Interface *pUI, void *p)
    pGame->draw(*pUI);
 }
 
-
 /*********************************
  * Main is pretty sparse.  Just initialize
  * the game and call the display engine.
@@ -34,12 +33,12 @@ void callBack(const Interface *pUI, void *p)
  *********************************/
 int main(int argc, char ** argv)
 {
-   Point topLeft(-200, 200);
-   Point bottomRight(200, -200);
-   
-   Interface ui(argc, argv, "Asteroids", topLeft, bottomRight);
-   Game game(topLeft, bottomRight);
-   ui.run(callBack, &game);
+   START:
+      Point topLeft(-200, 200);
+      Point bottomRight(200, -200);
+      Game game(topLeft, bottomRight);
+      Interface ui(argc, argv, "Asteroids", topLeft, bottomRight);
+      ui.run(callBack, &game);
    
    return 0;
 }
