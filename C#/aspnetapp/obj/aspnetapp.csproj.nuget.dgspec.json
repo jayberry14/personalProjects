@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dakin\\cs313-php\\aspnetapp\\aspnetapp.csproj": {}
+    "/home/josh/Documents/personalProjects/C#/aspnetapp/aspnetapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dakin\\cs313-php\\aspnetapp\\aspnetapp.csproj": {
+    "/home/josh/Documents/personalProjects/C#/aspnetapp/aspnetapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dakin\\cs313-php\\aspnetapp\\aspnetapp.csproj",
+        "projectUniqueName": "/home/josh/Documents/personalProjects/C#/aspnetapp/aspnetapp.csproj",
         "projectName": "aspnetapp",
-        "projectPath": "C:\\Users\\dakin\\cs313-php\\aspnetapp\\aspnetapp.csproj",
-        "packagesPath": "C:\\Users\\dakin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dakin\\cs313-php\\aspnetapp\\obj\\",
+        "projectPath": "/home/josh/Documents/personalProjects/C#/aspnetapp/aspnetapp.csproj",
+        "packagesPath": "/home/josh/.nuget/packages/",
+        "outputPath": "/home/josh/Documents/personalProjects/C#/aspnetapp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dakin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/josh/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
         }
       }
     }

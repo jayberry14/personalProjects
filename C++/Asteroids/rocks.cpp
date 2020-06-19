@@ -111,7 +111,7 @@ vector<Rock*> MediumRock :: hit(int &points) {
 vector<Rock*> SmallRock :: hit(int &points) {
 	vector<Rock*> rocks;
 	
-	rocks.push_back(new BigRock(point, 315));
+	//rocks.push_back(new BigRock(point, 315));  // Used to make game unlimited
 	points = 3;
 	kill();
 	return rocks;

@@ -273,7 +273,7 @@ void Game :: handleInput(const Interface & ui)
 		if (ui.isDown())
 			ship.brake();
    
-		// Check for "Spacebar
+		// Check for Spacebar
 		if (ui.isSpace())
 		{
 			Bullet newBullet;
@@ -281,7 +281,7 @@ void Game :: handleInput(const Interface & ui)
       
 			bullets.push_back(newBullet);
 		}
-	}
+	}	
 }
 
 /*********************************************
@@ -333,5 +333,9 @@ void Game :: draw(const Interface & ui)
 		endSign.setX(topLeft.getX() + 150);
 		endSign.setY(topLeft.getY() - 200);
 		drawText(endSign, "GAME OVER");
+		//Point playAgain;
+		//playAgain.setX(topLeft.getX() + 115);
+		//playAgain.setY(topLeft.getY() - 375);
+		//drawText(playAgain,"Press SPACE to play again");
 	}
 }
