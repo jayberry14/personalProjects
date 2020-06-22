@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import mongoConnect from './database';
 
 const articlesInfo = {
     'learn-react': {
@@ -35,4 +36,7 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
     res.status(200).send(articlesInfo[articleName]);
 });
 
-app.listen(8000, () => console.log('Listening on port 8000'));
+mongoConnect(client => {
+    app.listen(8000, () => console.log('Listening on port 8000'));
+})
+
