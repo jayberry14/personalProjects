@@ -1,22 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Card, Face1, Face2, Face1Content, Face2ContentA, Face2ContentP , ContentImg, FaceH3 } from '../styles/Styles';
 
 const ItemCard = ({ name, price, description, imageUrl, id, key }) => (
-    <div key={key} className="card">
-        <div className="face face1">
-            <div className="content">
-                <img src={imageUrl} alt="Product"></img>
-                <h3>{ name }</h3>
+    <Card key={key}>
+        <Face1>
+            <Face1Content>
+                <ContentImg src={imageUrl} alt="Product"/>
+                <FaceH3>{ name }</FaceH3>
+            </Face1Content>
+        </Face1>
+        <Face2>
+            <div>
+                <Face2ContentP>${price}</Face2ContentP><br></br>
+                <Face2ContentP>{description}</Face2ContentP><br></br>
+                <Face2ContentA to={`/item/${id}`}>Item Info</Face2ContentA>
             </div>
-        </div>
-        <div className="face face2">
-            <div className="content">
-                <p>${price}</p><br></br>
-                <p>{description}</p><br></br>
-                <Link to={`/item/${id}`}>Item Info</Link>
-            </div>
-        </div>
-    </div>
+        </Face2>
+    </Card>
 );
 
 export default ItemCard;

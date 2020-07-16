@@ -7,10 +7,8 @@ import {
 import Modal from 'react-modal';
 import PageNotFound from './views/PageNotFound';
 import HomePage from './views/Home';
-import NavBar from './components/NavBar';
+import AppNav from './components/AppNav';
 import './styles/App.css';
-
-
 
 Modal.setAppElement('body');
 
@@ -18,7 +16,7 @@ function App() {
   return (
     <Router>
       <div id="App" className="App">
-        <NavBar />
+        <AppNav />
         <div id="page-body">
           <Switch>
             <Route path="/" component={ HomePage } exact/>

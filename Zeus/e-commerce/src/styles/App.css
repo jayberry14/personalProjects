@@ -131,11 +131,13 @@ nav a:hover {
   position: relative;
   cursor: pointer;
   margin-left: 2vw;
+  background: transparent;
+  border: none !important;
 }
 
 .container .card .face{
-  width: 20vw; /* 300px */
-  height: 200px; /* 200px */
+  width: 20vw;
+  height: 200px; 
   transition: 0.5s;
 }
 
@@ -146,7 +148,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  transform: translateY(100px); /* 100px */
+  transform: translateY(100px);
 }
 
 .container .card:hover .face.face1{

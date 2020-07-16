@@ -2,6 +2,7 @@ import React from 'react';
 import PageNotFound from './PageNotFound';
 import ItemsContent from './ItemContent';
 import ItemCard from '../components/ItemCard';
+import { Grid } from '../styles/Styles';
 // import Modal from 'react-modal';
 
 // const customStyles = {
@@ -33,7 +34,7 @@ const HomePage = () => {
     
     return (
         <>
-            <div className='container'>
+            <Grid>
                 {ItemsContent.map((item, key) => (
                     <>
                         <ItemCard 
@@ -65,7 +66,7 @@ const HomePage = () => {
                         </Modal> */}
                     </>
                 ))}
-            </div>
+            </Grid>
         </>
     );
 };
