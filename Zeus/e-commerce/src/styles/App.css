@@ -1,7 +1,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
-  background-image: url('https://previews.agefotostock.com/previewimage/medibigoff/1d2b41cecc161bd097cb754f5423bcd2/fli-fim5285.jpg');
+  background-image: url('https://www.hdwallback.net/wp-content/uploads/2017/12/Cool-Blue-Glare-Dazzle-Colour-Background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -17,6 +17,8 @@ button {
   color: white;
   border-radius: 8px;
   cursor: pointer;
+  vertical-align: -.4vw;
+  text-align: center;
 }
 
 h1 {
@@ -26,39 +28,6 @@ h1 {
 h3, h4 {
   margin-bottom: 0;
 }
-
-/* nav {
-  border-bottom: 4px solid black;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  background: white;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-}
-
-nav li {
-  display: inline-block;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  padding: 16px 32px;
-}
-
-nav a:hover {
-  background: black;
-  color: white;
-}  */
 
 #page-body {
   max-width: fit-content;
@@ -143,7 +112,7 @@ nav a:hover {
 
 .container .card .face.face1{
   position: relative;
-  background: rgb(172, 123, 123);
+  background: #5db1ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +121,7 @@ nav a:hover {
 }
 
 .container .card:hover .face.face1{
-  background: #ff0009;
+  background: #0254a1;
   transform: translateY(0);
 }
 
@@ -183,7 +152,7 @@ nav a:hover {
   position: relative;
   background: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
@@ -215,7 +184,7 @@ nav a:hover {
   color: #fff;
 }
 
-/* .container .card .face.face2 .content .container{
+.container .card .face.face2 .content .container{
   display: flex;
   justify-content: center;
   margin-top: 200px;
@@ -232,18 +201,21 @@ nav a:hover {
   background: transparent;
   border: none;
   padding: 0 19px
-} */
+}
 
 .footer {
   /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(129, 152, 161);
   color: white;
   text-align: center;
-  position: fixed;
   z-index: 1;
+}
+
+.footer .a {
+  text-align: left;
+  padding-left: 7vw;
 }
 
 .img {
@@ -260,13 +232,6 @@ input {
     height: 2.5vw;
     width: 20vw;
     vertical-align: .1vw;
-}
-
-button {
-  height: 3vw;
-  width: 6vw;
-  vertical-align: -.4vw;
-  text-align: center;
 }
 
 .Modal {

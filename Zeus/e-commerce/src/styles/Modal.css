@@ -1,9 +1,9 @@
-/* .container {
+.container {
     display: flex;
     justify-content: center;
     margin-top: 200px;
     background: transparent
-  } */
+  }
   
   .trigger {
     background-color: black;

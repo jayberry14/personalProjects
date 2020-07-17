@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export const Grid = styled.div`
     max-width: 100%;
@@ -18,7 +18,7 @@ export const Face = styled.div`
 `;
 export const Face1 = styled(Face)`
     position: relative;
-    background: rgb(172, 123, 123);
+    background: #5db1ff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@ export const Face2 = styled(Face)`
     position: relative;
     background: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
@@ -77,7 +77,7 @@ export const Card = styled.div`
     border: none !important;
     &:hover {
         ${Face1} {
-            background: #ff0009;
+            background: #0254a1;
             transform: translateY(0);
         }
         ${Face1Content} {

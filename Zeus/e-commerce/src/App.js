@@ -26,7 +26,12 @@ function App() {
         </div>
       </div>
       <div className="footer">
-        <footer>&copy; 2020 Hackathon_Gang</footer>
+        <footer>
+          <div class="a"><a href="/">Contact Us</a><br></br></div>
+          <div class="a"><a href="/">Careers</a><br></br></div>
+          <div class="a"><a href="/">Privacy Policy</a><br></br></div>
+          &copy; 2020 Hackathon_Gang
+        </footer>
       </div>
     </Router>
   );
