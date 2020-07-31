@@ -1,7 +1,7 @@
 ###############################################################
 # Program:
 #     Milestone 10, Asteroids
-#     Brother MacBeth, CS165
+#     Br. MacBeth, CS165
 # Author:
 #     Josh Mayberry
 # Summary:
