@@ -20,7 +20,10 @@ const withDB = async (operations) => {
     }
 };
 
-app.post('/api/login-success/:name', (req, res) => res.send(`Hello ${name}!`));
+app.post('/api/login-success/:name', (req, res) => {
+    const userName = req.params.name;
+    res.status(200).send(`Hello ${userName}! You have successfully logged in.`);
+});
 
 app.post('/api/edit-item/', async (req, res) => {
     const { name, price, description, imageUrl, username } = req.body;
@@ -51,7 +54,7 @@ app.get('/api/get-item/:username/:name', async (req, res) => {
 
 app.get('/api/all-items/', async (req, res) => {
     withDB(async (db) => {
-        const myCoursor = await db.collection('itemsContent').find({ display: 1 });
+        const myCoursor = await db.collection('itemsContent').find({ });
         const documentArray = myCoursor.toArray();
         console.log(`000000000 ${documentArray[0]}`);
         console.log('THIS IS IT!!!!!!!!!!!!!');
@@ -61,4 +64,4 @@ app.get('/api/all-items/', async (req, res) => {
     });
 });
 
-app.listen(8000, () => console.log('Listening on port 8000')); 
+app.listen(8000, () => console.log('Listening on port 8000'));  
