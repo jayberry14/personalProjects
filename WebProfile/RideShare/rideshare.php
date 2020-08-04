@@ -22,15 +22,15 @@
 <body>
     <header>
         <div class="container-fluid bg-3">
-            <img src="https://web.byui.edu/mybyui/img/header/byui_logo.png" class="img-3" width="82" height="82" alt="BYU-IDAHO in white letters on black background" />
+            <!-- <img src="https://web.byui.edu/mybyui/img/header/byui_logo.png" class="img-3" width="82" height="82" alt="BYU-IDAHO in white letters on black background" /> -->
             <h1>Ride Share</h1>
         </div>
     </header>
     
     <div class="container-fluid bg-1" style="height:35vw">
-        <a href="drivers.php"><img src="../../Files/red-car.png" alt="I'm a driver!" class="img-thumbnail img-3"></a>
+        <a href="drivers.php"><img src="red-car.png" alt="I'm a driver!" class="img-thumbnail img-3"></a>
         <br>
-        <a href="ridesharelanding.php"><img src="../../Files/thumb.png" alt="I need a ride!" class="img-thumbnail img-4"></a>
+        <a href="ridesharelanding.php"><img src="thumb.png" alt="I need a ride!" class="img-thumbnail img-4"></a>
     </div>
 </body>
 <footer class="container-fluid bg-3 navbar-fixed-bottom">
