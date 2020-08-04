@@ -1,15 +1,17 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import MongoClient from 'mongodb';
+//import MongoClient from 'mongodb';
+const { MongoClient } = require('mongodb');
 
 const app = express();
+const uri = "mongodb+srv://Joshua:ProTectOr@h0me#@e-commerce-backend/test?retryWrites=true&w=majority";
 
 app.use(bodyParser.json());
 
 const withDB = async (operations) => {
     try {
-        const client = await MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true }, { useUnifiedTopology: true });
-        const db = client.db('e-commerce');
+        const client = await MongoClient.connect(uri, { useNewUrlParser: true }, { useUnifiedTopology: true });
+        const db = client.db('e-commerce-backend');
 
         await operations(db);
         
@@ -20,17 +22,19 @@ const withDB = async (operations) => {
     }
 };
 
-app.post('/api/login-success/:name', (req, res) => {
-    const userName = req.params.name;
-    res.status(200).send(`Hello ${userName}! You have successfully logged in.`);
-});
+app.post('/api/login-success/:name', (req, res) => res.status(200).send(`Hello ${req.params.name}! You have successfully logged in.`));
 
 app.post('/api/edit-item/', async (req, res) => {
     const { name, price, description, imageUrl, username } = req.body;
     
     withDB(async (db) => {
-        const updatedItemInfo = await db.collection('itemsContent').updateOne({ name, price, description, imageUrl, username});
-        res.status(200).json(updatedItemInfo);
+        const foundItemName = await db.collection('itemsContent').findOne({ name });
+        const updatedItemName = await db.collection('itemsContent').updateOne({ name }, {
+            '$set': {
+                name: foundItemName.name,
+            }
+        });
+        res.status(200).json(updatedItemName);
     });
 });
 

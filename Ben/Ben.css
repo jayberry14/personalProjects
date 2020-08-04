@@ -1,5 +1,5 @@
 html { 
-    background: url(images/bg.jpg) no-repeat center center fixed; 
+    background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -17,8 +17,9 @@ div {
 
 body {
     height: 100%;
-    margin: 0;
-    padding: 0;
+    max-width: fit-content;
+    margin: auto;
+    padding-top: 64px;
     background: inherit;
     color: whitesmoke;
 }
@@ -75,7 +76,8 @@ footer {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQG9AKP_Np_pp5PzYjrq09YGdukOtiB6gKLgBU9pAdYg3S4aF_A&usqp=CAU");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
+    background-position: center center;
     color: whitesmoke;
     text-align: center;
     /* min-height: 75vw; */
@@ -84,7 +86,8 @@ footer {
     background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-dark-green-material-poster-background-image_128892.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
+    background-position: center center;
     color: black;
     text-align: center;
 }
