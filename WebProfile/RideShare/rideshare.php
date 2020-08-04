@@ -28,9 +28,9 @@
     </header>
     
     <div class="container-fluid bg-1" style="height:35vw">
-        <a href="./RideShare/drivers.php"><img src="../../Files/red-car.png" alt="I'm a driver!" class="img-thumbnail img-3"></a>
+        <a href="drivers.php"><img src="../../Files/red-car.png" alt="I'm a driver!" class="img-thumbnail img-3"></a>
         <br>
-        <a href="./RideShare/ridesharelanding.php"><img src="../../Files/thumb.png" alt="I need a ride!" class="img-thumbnail img-4"></a>
+        <a href="ridesharelanding.php"><img src="../../Files/thumb.png" alt="I need a ride!" class="img-thumbnail img-4"></a>
     </div>
 </body>
 <footer class="container-fluid bg-3 navbar-fixed-bottom">
