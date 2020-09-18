@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import notFound from './views/notFound'
+import homePage from './views/homePage'
+import AppNav from './components/appNav';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <AppNav />
+        <div id="page-body">
+          <Switch>
+            <Route path="/" component={ homePage } exact/>
+            <Route component={ notFound }/>
+          </Switch>
+        </div>
+      </div>
+      <div className="footer">
+        <footer>
+          <div className="a"><a href="/">Contact Us</a><br></br></div>
+          <div className="a"><a href="/">Careers</a><br></br></div>
+          <div className="a"><a href="/">Privacy Policy</a><br></br></div>
+          &copy; 2021 Jayberry Studios
+        </footer>
+      </div>
+    </Router>
   );
 }
 

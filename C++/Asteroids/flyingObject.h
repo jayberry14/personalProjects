@@ -15,14 +15,14 @@ class FlyingObject {
 	public:
 		FlyingObject();
 		FlyingObject(Point point);
-		Point getPoint() const { return point; }
-		Velocity getVelocity() const { return velocity; }
-		float getAngle() const { return angle; }
-		bool isAlive() { return alive; }
-		void setPoint(Point point) { this->point = point; }
-		void setAngle(int angle) { this->angle = angle; }
+		Point getPoint() 			  const { return point; }
+		Velocity getVelocity()  	  const { return velocity; }
+		float getAngle() 			  const { return angle; }
+		bool isAlive() 				  		{ return alive; }
+		void setPoint(Point point)    		{ this->point = point; }
+		void setAngle(int angle)      		{ this->angle = angle; }
 		void setVelocity(Velocity velocity) { this->velocity = velocity; }
-		void setAlive(bool alive) { this->alive = alive; }
+		void setAlive(bool alive) 			{ this->alive = alive; }
 		void kill();
 		void advance();
 		virtual void draw() = 0;
