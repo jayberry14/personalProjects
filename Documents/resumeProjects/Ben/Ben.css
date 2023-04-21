@@ -1,0 +1,150 @@
+html { 
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+div {
+    max-width: 100%;
+}
+
+body {
+    height: 100%;
+    max-width: fit-content;
+    margin: auto;
+    padding-top: 64px;
+    background: inherit;
+    color: whitesmoke;
+}
+
+p {
+    font-size: 14pt;
+}
+
+footer {
+    text-align: center;
+}
+
+/* .container-fluid {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+} */
+
+.bg-1 {
+    background-color: whitesmoke;
+    color: lightslategray;
+    text-align: center;
+}
+.bg-2 {
+    background-color: rgb(226, 226, 226);
+    color: #555555;
+    text-align: center;
+}
+.bg-3 {
+    background-color: #006EB6; /* Blue */
+    color: #ffffff;
+    text-align: center;
+}
+.bg-4 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+    text-align: center;
+}
+.bg-5 {
+    background-color: #ffffff; /* White */
+    color: #555555;
+    text-align: center;
+}
+.bg-6 {
+    background-color: #7af1ec; /* Light Teal */
+    color: #555555;
+    text-align: center;
+  }
+.bg-7 {
+    background-color: forestgreen;
+    color: whitesmoke;
+    text-align: center;
+}
+.bg-8 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQG9AKP_Np_pp5PzYjrq09YGdukOtiB6gKLgBU9pAdYg3S4aF_A&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: whitesmoke;
+    text-align: center;
+    /* min-height: 75vw; */
+}
+.bg-9 {
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-dark-green-material-poster-background-image_128892.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: black;
+    text-align: center;
+}
+
+.img-1 {
+    height: 300px;
+    width: 100%;
+}
+
+.img-2 {
+    max-width: 100%;
+    height: 10%;
+    width: 10%;
+    margin-left: 2vw;
+    margin-top: -3vw;
+}
+
+.img-3 {
+    max-width: 100%;
+    float: left;
+}
+
+.img-4 {
+    max-width: 100%;
+    float: right;
+}
+
+.divHover {
+    visibility: visible;
+    color: black;
+}
+
+.divHover:hover {
+    font-weight: bold;
+}
+
+.button {
+    box-shadow: slategrey;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.squish-center {
+    margin: 50px 15%;
+}
+
+.squish-center2 {
+    margin: 50px 25%;
+}
+
+.squish-center3 {
+    padding-left: 25vw;
+    padding-right: 25vw;
+}
